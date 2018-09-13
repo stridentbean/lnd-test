@@ -1345,8 +1345,8 @@ func extractBitcoindRPCParams(bitcoindConfigPath string) (string, string, string
 // ZMQ rawblock and rawtx notifications are different.
 func checkZMQOptions(zmqBlockHost, zmqTxHost string) error {
 	if zmqBlockHost == zmqTxHost {
-		return errors.New("zmqpubrawblock and zmqpubrawtx must be set" +
-			"to different addresses")
+		return errors.New("zmqpubrawblock and zmqpubrawtx must be set zmqBlockHost" + zmqBlockHost +
+			"to different addresses zmqTxHost" + zmqTxHost)
 	}
 
 	return nil
