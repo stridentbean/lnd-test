@@ -1276,6 +1276,8 @@ func extractBitcoindRPCParams(bitcoindConfigPath string) (string, string, string
 	}
 	zmqBlockHost := string(zmqBlockHostSubmatches[1])
 	zmqTxHost := string(zmqTxHostSubmatches[1])
+	return errors.New("zmqTxHostSubmatches" + zmqTxHostSubmatches[0] +
+    			" zmqTxHostSubmatches[1]" + zmqTxHostSubmatches[1])
 	if err := checkZMQOptions(zmqBlockHost, zmqTxHost); err != nil {
 		return "", "", "", "", err
 	}
